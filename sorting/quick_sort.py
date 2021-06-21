@@ -1,8 +1,8 @@
 def quick_sort(arr):
     if len(arr) <= 1:
         return arr
-    else:
-        pivot = arr.pop()
+
+    pivot = arr.pop()
 
     item_greater = []
     item_lower = []
@@ -18,3 +18,4 @@ def quick_sort(arr):
 
 arr_items = [5, 3, 1, 2, 4, 9, 0]
 print(quick_sort(arr_items))
+print(quick_sort(arr_items)[::-1])
