@@ -60,7 +60,7 @@ def deleteNode(root, value):    # ******* important **********
 
     if value < root.value:
         root.left = deleteNode(root.left, value)
-    if value > root.value:
+    elif value > root.value:
         root.right = deleteNode(root.right, value)
     else:
         if root.left is None:
