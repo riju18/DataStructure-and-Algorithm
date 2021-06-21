@@ -54,7 +54,7 @@ def findMaxNode(root):
         return root.value
 
 
-def deleteNode(root, value):
+def deleteNode(root, value):    # ******* important **********
     if root is None:
         return root
 
@@ -82,7 +82,6 @@ def deleteNode(root, value):
 
 
 rt = Tree(100)
-
 insert(rt, Tree(21))
 insert(rt, Tree(50))
 insert(rt, Tree(10))
@@ -107,6 +106,3 @@ print('\n', 'minimum value of BST: ', findMinNode(rt), '\n')
 print('\n', 'maximum value of BST: ', findMaxNode(rt), '\n')
 
 deleteNode(rt, 10)
-print('\n')
-print('post-order(left->right->root): \n')
-postOrder(rt)
