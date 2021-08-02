@@ -29,7 +29,7 @@ class InsertionSort:
         for i in range(1, len(self.numberList)):
             val = self.numberList[i]
             j = i
-            while (j > 0 and self.numberList[j - 1] < val):
+            while j > 0 and self.numberList[j - 1] < val:
                 self.numberList[j] = self.numberList[j - 1]
                 j -= 1
             self.numberList[j] = val
