@@ -13,9 +13,7 @@ class selectionSort:
             minValIndex = i
             for j in range(i + 1, len(self.numberList)):
                 if self.numberList[minValIndex] > self.numberList[j]:
-                    temp = self.numberList[minValIndex]
-                    self.numberList[minValIndex] = self.numberList[j]
-                    self.numberList[j] = temp
+                    self.numberList[minValIndex], self.numberList[j] = self.numberList[j], self.numberList[minValIndex]
         print(self.numberList)
 
     def showDescending(self):
@@ -23,9 +21,7 @@ class selectionSort:
             maxValIndex = i
             for j in range(i + 1, len(self.numberList)):
                 if self.numberList[maxValIndex] < self.numberList[j]:
-                    temp = self.numberList[maxValIndex]
-                    self.numberList[maxValIndex] = self.numberList[j]
-                    self.numberList[j] = temp
+                    self.numberList[maxValIndex], self.numberList[j] = self.numberList[j], self.numberList[maxValIndex]
         print(self.numberList)
 
 
