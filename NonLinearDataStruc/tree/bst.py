@@ -42,14 +42,14 @@ def InOrder(root):
 
 def findMinNode(root):
     if root:
-        while root.left is not None:
+        while root.left:
             root = root.left
         return root.value
 
 
 def findMaxNode(root):
     if root:
-        while root.right is not None:
+        while root.right:
             root = root.right
         return root.value
 
