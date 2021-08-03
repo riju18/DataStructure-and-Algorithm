@@ -41,20 +41,24 @@ def InOrder(root):
 
 
 def findMinNode(root):
+    size = 1
     if root:
         while root.left:
             root = root.left
-        return root.value
+            size += 1
+        return root.value, size
 
 
 def findMaxNode(root):
+    size = 1
     if root:
         while root.right:
             root = root.right
-        return root.value
+            size += 1
+        return root.value, size
 
 
-def deleteNode(root, value):    # ******* important **********
+def deleteNode(root, value):  # ******* important **********
     if root is None:
         return root
 
@@ -91,18 +95,18 @@ insert(rt, Tree(99))
 insert(rt, Tree(220))
 insert(rt, Tree(103))
 
-print('pre-order(root->left->right): \n')
+print('pre-order(root->left->right):')
 preOrder(rt)
 
 print('\n')
-print('post-order(left->right->root): \n')
+print('post-order(left->right->root):')
 postOrder(rt)
 
 print('\n')
-print('in-order(left->root->right): \n')
+print('in-order(left->root->right):')
 InOrder(rt)
 
-print('\n', 'minimum value of BST: ', findMinNode(rt), '\n')
-print('\n', 'maximum value of BST: ', findMaxNode(rt), '\n')
+print('\n')
+print(f"Min val & size of BST: {findMinNode(rt)}, Max val & size of BST: {findMaxNode(rt)}")
 
 deleteNode(rt, 10)
