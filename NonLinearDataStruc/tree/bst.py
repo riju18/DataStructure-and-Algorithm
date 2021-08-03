@@ -35,9 +35,9 @@ def postOrder(root):
 
 def InOrder(root):
     if root:
-        postOrder(root.left)
+        InOrder(root.left)
         print(root.value, end=' ')
-        postOrder(root.right)
+        InOrder(root.right)
 
 
 def findMinNode(root):
