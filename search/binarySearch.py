@@ -14,7 +14,7 @@ def binarySearch(list, key):
 
 demoList = [84, 21, 47, 96, 15]
 demoList.sort()
-flag = binarySearch(demoList, 16)
+flag = binarySearch(demoList, 21)
 if flag is True:
     print('key found..')
 else:
