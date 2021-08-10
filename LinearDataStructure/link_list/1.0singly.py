@@ -28,7 +28,8 @@ class linkedList:       # 2
         current = self.start
         while current:
             if pos == ind:
-                print(current.value)
+                print(f"Position: {ind}, value:{current.value}")
+                break
             pos += 1
             current = current.next
 
@@ -37,7 +38,8 @@ class linkedList:       # 2
         current = self.start
         while current:
             if current.value == val:
-                print(pos)
+                print(f"Value: {val}, position: {pos}")
+                break
             pos += 1
             current = current.next
 
