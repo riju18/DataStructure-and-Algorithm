@@ -1,6 +1,6 @@
 class Graph:
     def __init__(self, v):
-        self.adjMatrix = [[0] * vertex for _ in range(vertex)]
+        self.adjMatrix = [[0] * v for _ in range(v)]
         self.vertices = v
 
     def addEdge(self, f, t, w=1):
