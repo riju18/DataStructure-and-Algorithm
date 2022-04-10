@@ -1,3 +1,19 @@
+class Q:
+    def __init__(self):
+        self.q_list = []
+        self.first = 0
+        self.last = 0
+
+    def nq(self, vertex):
+        if len(self.q_list) == 0:
+            self.first += 1
+        self.last += 1
+        self.q_list.insert(self.last, vertex)
+
+    def dq(self):
+        pass
+
+
 class Graph:
     def __init__(self, v):
         self.adjMatrix = [[0] * v for _ in range(v)]
@@ -37,11 +53,17 @@ class Graph:
                 count += 1
         return count
 
+    def bfs(self, source):
+        s = source
+        q = Q()
+        visited = [0] * self.vertices
+        print(s, end=' ')
+
     def display(self):
         print(self.adjMatrix)
 
 
-G = Graph(7)
+G = Graph(6)
 # before adding edge
 print("Before Adding edge")
 G.display()
