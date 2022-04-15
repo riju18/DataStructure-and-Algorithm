@@ -43,11 +43,11 @@ class linkedList:       # 2
             pos += 1
             current = current.next
 
-
-linkList = linkedList()
-linkList.insert(2)
-linkList.insert(5)
-linkList.insert(3)
-linkList.show()
-linkList.showByPos(1)
-linkList.showPosByVal(5)
+if __name__ == '__main__':
+    linkList = linkedList()
+    linkList.insert(2)
+    linkList.insert(5)
+    linkList.insert(3)
+    linkList.show()
+    linkList.showByPos(1)
+    linkList.showPosByVal(5)
