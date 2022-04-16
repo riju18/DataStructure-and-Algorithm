@@ -43,6 +43,14 @@ class linkedList:  # 2
             pos += 1
             current = current.next
 
+    def get_length(self):
+        current = self.start
+        c = 0
+        while current:
+            current = current.next
+            c += 1
+        print(f"Length of linked list is: {c}")
+
     def reverse_linked_list(self):
         current_node = self.start
         previous_node = None
@@ -66,4 +74,5 @@ if __name__ == '__main__':
     linkList.show()
     linkList.showByPos(1)
     linkList.showPosByVal(5)
+    linkList.get_length()
     linkList.reverse_linked_list()
