@@ -49,8 +49,7 @@ class linkedList:  # 2
         next_node = None
         while current_node:
             next_node, current_node.next = current_node.next, previous_node
-            previous_node = current_node
-            current_node = next_node
+            previous_node, current_node = current_node, next_node
 
         current = previous_node
         while current:
