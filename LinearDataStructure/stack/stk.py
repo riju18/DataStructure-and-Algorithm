@@ -16,6 +16,9 @@ class Stack:
         if len(self.stack) > 1:
             self.stack.pop()
 
+    def peekVal(self):  # always return the last item
+        return self.stack[-1] if self.stack else "no item in stack"
+
     def show(self):
         print(self.stack)
 
@@ -25,6 +28,8 @@ st.insertVal(3)
 st.insertVal(5)
 st.insertVal(7)
 st.insertVal(9)
+
+print(st.peekVal())
 
 st.delVal()
 
