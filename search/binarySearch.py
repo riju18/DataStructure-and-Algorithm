@@ -1,15 +1,16 @@
 def binarySearch(list, key):
     low = 0
     high = len(list) - 1
-    while low <= high:
+    found = False
+    while low <= high and not found:
         mid = (low + high) // 2
         if list[mid] == key:
-            return True
+            found = True
         elif key < list[mid]:
             high = mid - 1
         else:
             low = mid + 1
-    return False
+    return found
 
 
 demoList = [84, 21, 47, 96, 15]
