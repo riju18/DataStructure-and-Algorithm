@@ -12,7 +12,5 @@ def linearSearch(listItem, key):
 
 demoList = [84, 21, 47, 96, 15]
 flag = linearSearch(demoList, 96)
-if flag is True:
-    print('key found..')
-else:
-    print('key not found..')
+result = 'key found..' if flag is True else 'key not found..'
+print(result)
