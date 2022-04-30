@@ -68,14 +68,18 @@ def deleteNode(root, value):  # ******* important **********
         root.right = deleteNode(root.right, value)
     else:
         if root.left is None:
-            temp = root.right
-            root = None
-            return temp
+            # temp = root.right
+            # root = None
+            # return temp
+            root = root.right
+            return root
 
         elif root.right is None:
-            temp = root.left
-            root = None
-            return temp
+            # temp = root.left
+            # root = None
+            # return temp
+            root = root.left
+            return root
 
         else:
             temp = findMinNode(root.right)
