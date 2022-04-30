@@ -10,37 +10,37 @@ def insert(root, node):
         root = node
         return root
 
-    if node.value < root.value:
+    if node.value < root.value:  # left
         root.left = insert(root.left, node)
 
-    if node.value > root.value:
+    if node.value > root.value:  # right
         root.right = insert(root.right, node)
 
     return root
 
 
-def preOrder(root):
+def preOrder(root):  # root --> left --> right
     if root:
         print(root.value, end=' ')
         preOrder(root.left)
         preOrder(root.right)
 
 
-def postOrder(root):
+def postOrder(root):  # left --> right --> root
     if root:
         postOrder(root.left)
         postOrder(root.right)
         print(root.value, end=' ')
 
 
-def InOrder(root):
+def InOrder(root):  # left --> root --> right
     if root:
         InOrder(root.left)
         print(root.value, end=' ')
         InOrder(root.right)
 
 
-def findMinNode(root):
+def findMinNode(root):  # most left
     size = 1
     if root:
         while root.left:
@@ -49,7 +49,7 @@ def findMinNode(root):
         return root.value, size
 
 
-def findMaxNode(root):
+def findMaxNode(root):  # most right
     size = 1
     if root:
         while root.right:
