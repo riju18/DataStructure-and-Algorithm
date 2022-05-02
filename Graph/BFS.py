@@ -11,7 +11,7 @@ class Q:
         self.q_list.insert(self.last, vertex)
 
     def dq(self):
-        pass
+        return self.q_list.pop(0)
 
 
 class Graph:
@@ -57,29 +57,41 @@ class Graph:
         s = source
         q = Q()
         visited = [0] * self.vertices
-        print(s, end=' ')
+        print(f"source: {s}\n")
+        visited[s] = 1
+        q.nq(s)
+        while q.q_list:
+            s = q.dq()
+            for i in range(self.vertices):
+                if self.adjMatrix[s][i] == 1 and visited[i] == 0:
+                    print(f"{i}", end=' - ')
+                    visited[i] = 1
+                    q.nq(i)
 
     def display(self):
         print(self.adjMatrix)
 
 
-G = Graph(6)
-# before adding edge
-print("Before Adding edge")
-G.display()
+G = Graph(7)
+
 G.addEdge(0, 1)
+G.addEdge(0, 5)
+G.addEdge(0, 6)
+G.addEdge(1, 0)
 G.addEdge(1, 2)
-G.addEdge(2, 1, 2)
-G.addEdge(3, 5)
-G.addEdge(2, 5)
-# after adding edge
-print("after adding edge")
+G.addEdge(1, 5)
+G.addEdge(1, 6)
+G.addEdge(2, 3)
+G.addEdge(2, 4)
+G.addEdge(2, 6)
+G.addEdge(3, 4)
+G.addEdge(4, 2)
+G.addEdge(4, 5)
+G.addEdge(5, 2)
+G.addEdge(5, 3)
+G.addEdge(6, 3)
+
 G.display()
-G.removeEdge(0, 1)
-# after removing edge
-print("after removing edge")
-G.display()
-print(f"The weight of 2,1 vertices: {G.getWeight(2, 1)}")
-print(f"Total Edges: {G.getEdges()}")
-print(f"In degree of vertex 1: {G.inDegree(1)}")
-print(f"Out degree of vertex 1: {G.outDegree(2)}")
+
+G.bfs(0)
+
