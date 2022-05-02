@@ -3,7 +3,7 @@ class Graph:
         self.adjMatrix = [[0] * v for _ in range(v)]
         self.vertices = v
 
-    def addEdge(self, f, t, w=1):
+    def addEdge(self, f, t, w=1):  # f:from, t: to
         self.adjMatrix[f][t] = w
 
     def removeEdge(self, f, t, w=0):
@@ -43,7 +43,7 @@ class Graph:
 
 G = Graph(7)
 # before adding edge
-print("Before Adding edge")
+print("before adding edge")
 G.display()
 G.addEdge(0, 1)
 G.addEdge(1, 2)
