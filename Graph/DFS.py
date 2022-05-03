@@ -43,7 +43,7 @@ class Graph:
             print(f"{source}", end='-')
             self.visited[source] = 1
             for i in range(self.vertices):
-                if self.adjMatrix[source][i] == 1 and self.visited[i] == 0:
+                if self.adjMatrix[source][i] == 1 and self.visited[i] == 0:  # check edge & mpt visited yet
                     self.dfs(i)
 
     def display(self):

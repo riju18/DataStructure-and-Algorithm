@@ -57,13 +57,13 @@ class Graph:
         s = source
         q = Q()
         visited = [0] * self.vertices
-        print(f"source: {s}\n")
+        print(f"source: {s}")
         visited[s] = 1
         q.nq(s)
         while q.q_list:
             s = q.dq()
             for i in range(self.vertices):
-                if self.adjMatrix[s][i] == 1 and visited[i] == 0:
+                if self.adjMatrix[s][i] == 1 and visited[i] == 0:  # check edge & mpt visited yet
                     print(f"{i}", end=' - ')
                     visited[i] = 1
                     q.nq(i)
@@ -93,5 +93,6 @@ G.addEdge(6, 3)
 
 G.display()
 
+print('Sequence:')
 G.bfs(0)
 
