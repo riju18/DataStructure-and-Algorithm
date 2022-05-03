@@ -37,16 +37,17 @@ class InsertionSort:
         print(self.numberList)
 
 
-sortt = InsertionSort()
+if __name__ == '__main__':
+    i_sort = InsertionSort()
 
-sortt.insertNum(8)
-sortt.insertNum(5)
-sortt.insertNum(13)
-sortt.insertNum(11)
-sortt.insertNum(2)
-sortt.insertNum(7)
+    i_sort.insertNum(8)
+    i_sort.insertNum(5)
+    i_sort.insertNum(13)
+    i_sort.insertNum(11)
+    i_sort.insertNum(2)
+    i_sort.insertNum(7)
 
-print('in ascending:\n')
-sortt.showAscending()
-print('\n in descending:\n')
-sortt.showDescending()
+    print('in ascending:\n')
+    i_sort.showAscending()
+    print('\n in descending:\n')
+    i_sort.showDescending()

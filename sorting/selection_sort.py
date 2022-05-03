@@ -25,15 +25,16 @@ class selectionSort:
         print(self.numberList)
 
 
-ssort = selectionSort()
-
-ssort.insertVal(90)
-ssort.insertVal(35)
-ssort.insertVal(60)
-ssort.insertVal(7)
-ssort.insertVal(2)
-ssort.insertVal(3)
-ssort.insertVal(89)
-
-ssort.showAscending()
-ssort.showDescending()
+if __name__ == '__main__':
+    s_sort = selectionSort()
+    
+    s_sort.insertVal(90)
+    s_sort.insertVal(35)
+    s_sort.insertVal(60)
+    s_sort.insertVal(7)
+    s_sort.insertVal(2)
+    s_sort.insertVal(3)
+    s_sort.insertVal(89)
+    
+    s_sort.showAscending()
+    s_sort.showDescending()

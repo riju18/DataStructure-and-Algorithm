@@ -41,23 +41,24 @@ class Graph:
         print(self.adjMatrix)
 
 
-G = Graph(7)
-# before adding edge
-print("before adding edge")
-G.display()
-G.addEdge(0, 1)
-G.addEdge(1, 2)
-G.addEdge(2, 1, 2)
-G.addEdge(3, 5)
-G.addEdge(2, 5)
-# after adding edge
-print("after adding edge")
-G.display()
-G.removeEdge(0, 1)
-# after removing edge
-print("after removing edge")
-G.display()
-print(f"The weight of 2,1 vertices: {G.getWeight(2, 1)}")
-print(f"Total Edges: {G.getEdges()}")
-print(f"In degree of vertex 1: {G.inDegree(1)}")
-print(f"Out degree of vertex 1: {G.outDegree(2)}")
+if __name__ == '__main__':
+    G = Graph(7)
+    # before adding edge
+    print("before adding edge")
+    G.display()
+    G.addEdge(0, 1)
+    G.addEdge(1, 2)
+    G.addEdge(2, 1, 2)
+    G.addEdge(3, 5)
+    G.addEdge(2, 5)
+    # after adding edge
+    print("after adding edge")
+    G.display()
+    G.removeEdge(0, 1)
+    # after removing edge
+    print("after removing edge")
+    G.display()
+    print(f"The weight of 2,1 vertices: {G.getWeight(2, 1)}")
+    print(f"Total Edges: {G.getEdges()}")
+    print(f"In degree of vertex 1: {G.inDegree(1)}")
+    print(f"Out degree of vertex 1: {G.outDegree(2)}")

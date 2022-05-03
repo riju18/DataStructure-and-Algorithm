@@ -47,10 +47,11 @@ class Graph:
         return iter(self.vertexList.values())
 
 
-g = Graph()
-for i in 'abcde':   # add some vertices
-    g.addVertex(i)
-g.addEdge('a', 'b', 2)  # add edge
-g.addEdge('a', 'c', 1)
-for i in g:
-    print(i)
+if __name__ == '__main__':
+    g = Graph()
+    for i in 'abcde':  # add some vertices
+        g.addVertex(i)
+    g.addEdge('a', 'b', 2)  # add edge
+    g.addEdge('a', 'c', 1)
+    for i in g:
+        print(i)

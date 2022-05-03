@@ -23,14 +23,15 @@ class Stack:
         print(self.stack)
 
 
-st = Stack()
-st.insertVal(3)
-st.insertVal(5)
-st.insertVal(7)
-st.insertVal(9)
+if __name__ == '__main__':
+    st = Stack()
+    st.insertVal(3)
+    st.insertVal(5)
+    st.insertVal(7)
+    st.insertVal(9)
 
-print(st.peekVal())
+    print(st.peekVal())
 
-st.delVal()
+    st.delVal()
 
-st.show()
+    st.show()
