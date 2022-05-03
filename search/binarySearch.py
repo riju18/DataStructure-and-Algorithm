@@ -1,12 +1,12 @@
-def binarySearch(list, key):
+def binarySearch(l, key):
     low = 0
-    high = len(list) - 1
+    high = len(l) - 1
     found = False
     while low <= high and not found:
         mid = (low + high) // 2
-        if list[mid] == key:
+        if l[mid] == key:
             found = True
-        elif key < list[mid]:
+        elif key < l[mid]:
             high = mid - 1
         else:
             low = mid + 1
