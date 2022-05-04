@@ -4,8 +4,7 @@ def linearSearch(listItem, key):
     while position < len(listItem) and not flag:
         if listItem[position] == key:
             flag = True
-        else:
-            position += 1
+        position += 1
 
     return flag
 
