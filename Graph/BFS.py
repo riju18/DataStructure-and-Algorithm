@@ -18,6 +18,8 @@ class Graph:
     def __init__(self, v):
         self.adjMatrix = [[0] * v for _ in range(v)]
         self.vertices = v
+        self.q = Q()
+        self.visited = [0] * self.vertices
 
     def addEdge(self, f, t, w=1):
         self.adjMatrix[f][t] = w
@@ -55,18 +57,16 @@ class Graph:
 
     def bfs(self, source):
         s = source
-        q = Q()
-        visited = [0] * self.vertices
-        print(f"source: {s}")
-        visited[s] = 1
-        q.nq(s)
-        while q.q_list:
-            s = q.dq()
+        print(f"source: {s} --> ")
+        self.visited[s] = 1
+        self.q.nq(s)
+        while self.q.q_list:
+            s = self.q.dq()
             for i in range(self.vertices):
-                if self.adjMatrix[s][i] == 1 and visited[i] == 0:  # check edge & mpt visited yet
+                if self.adjMatrix[s][i] == 1 and self.visited[i] == 0:  # check edge & mpt visited yet
                     print(f"{i}", end=' - ')
-                    visited[i] = 1
-                    q.nq(i)
+                    self.visited[i] = 1
+                    self.q.nq(i)
 
     def display(self):
         print(self.adjMatrix)
@@ -94,6 +94,6 @@ if __name__ == '__main__':
 
     G.display()
 
-    print('Sequence:')
+    print('Sequence:\n==========')
     G.bfs(0)
 
