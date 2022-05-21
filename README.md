@@ -5,6 +5,7 @@
 + [Search](#search)
 + [Linear Data Structure](#linear-Data-Structure)
 + [Non-Linear Data Structure](#non-Linear-Data-Structure)
++ [Graph](#graph)
 
 # sorting:
 + bubble
@@ -26,3 +27,7 @@
 
 # non-Linear-Data-Structure:
 + tree
+
+# graph:
++ BFS
++ DFS
