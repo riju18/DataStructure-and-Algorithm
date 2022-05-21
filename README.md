@@ -1,22 +1,28 @@
 # Data Structure &amp; Algorithm
 
-## Sorting:
++ [Sorting](#sorting)
++ [Recursion](#recursion)
++ [Search](#search)
++ [Linear Data Structure](#linear-Data-Structure)
++ [Non-Linear Data Structure](#non-Linear-Data-Structure)
+
+# sorting:
 + bubble
 + insertion
 + merge
 + quick
 + selection
 
-## Recursion
+# recursion
 
-## Search:
+# search:
 + binary
 + linear
 
-## Linear Data Structure:
+# linear-Data-Structure:
 + link list
 + stack
 + queue
 
-## Non-Linear Data Structure:
+# non-Linear-Data-Structure:
 + tree
