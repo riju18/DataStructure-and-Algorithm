@@ -2,6 +2,7 @@
 # stack: LIFO/FILO
 # LIFO: last in first out
 # FILO: first in last out
+# EX: lift
 # ***************************
 
 
