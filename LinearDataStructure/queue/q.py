@@ -2,6 +2,7 @@
 # Principle
 # ============
 # FIFO: First in first out
+# EX: ticket line
 # *************************
 
 
