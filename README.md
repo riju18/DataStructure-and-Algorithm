@@ -6,6 +6,7 @@
 + [Linear Data Structure](#linear-Data-Structure)
 + [Non-Linear Data Structure](#non-Linear-Data-Structure)
 + [Graph](#graph)
++ [Sliding window]()
 
 # sorting:
 + bubble
