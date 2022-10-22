@@ -1,8 +1,8 @@
 # longest sub str which not more k distinct char
 # ===============================================
 
-the_str = "cbbebi"
-k = 3
+the_str = "ABCAC"
+k = 2
 hash_map = {}
 win_start, max_length = 0, 0
 sub_str_arr = ''
