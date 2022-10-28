@@ -1,5 +1,7 @@
 # sliding window with dynamic length
-# ==================================
+# ============================================
+# modification: max k char repeat upto n times
+# ===========================================
 
 the_str = "abccde"
 char_map = {}
