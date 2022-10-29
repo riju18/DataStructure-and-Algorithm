@@ -32,7 +32,7 @@ print(f"longest sub-arr: {sub_str_arr}")
 # longest sub str which not more k distinct char
 # ===============================================
 
-the_str = "ABCAC"
+the_str = "araaci"
 k = 2
 hash_map = {}
 win_start, max_length = 0, 0
@@ -52,8 +52,9 @@ for win_end in range(len(the_str)):
             del hash_map[left_char]
         print(f"new hash_map: {hash_map}")
         win_start += 1
+    if (win_end - win_start + 1) > max_length:
+        sub_str_arr = the_str[win_start: win_end + 1]
     max_length = max(max_length, win_end - win_start + 1)
-    sub_str_arr = the_str[win_start: win_end+1]
 print(f"max_length: {max_length}")
 print(f"longest sub-str: {sub_str_arr}")
 
