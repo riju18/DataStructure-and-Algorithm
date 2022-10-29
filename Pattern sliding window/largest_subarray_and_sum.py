@@ -13,7 +13,7 @@ for win_end in range(len(arr)):
         print(f"max_sum: {max_sum}")
         # ******* most important part starts ***********
         win_sum -= arr[win_start]
-        print(f"calculated win_sum: {win_sum}")
+        print(f"updated win_sum: {win_sum}")
         win_start += 1
         print(f"win_start: {win_start}")
         # ******* most important part ends ***********
