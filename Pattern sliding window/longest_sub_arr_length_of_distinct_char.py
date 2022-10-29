@@ -3,7 +3,7 @@
 
 # ex #1
 # ======
-fruit = ['A', 'B', 'C', 'A', 'C']
+fruit = ['A', 'B', 'C', 'B', 'B', 'C']
 fruit_map = {}
 win_start, max_length = 0, 0
 sub_str_arr = ''
@@ -22,8 +22,9 @@ for win_end in range(len(fruit)):
             del fruit_map[left_char]
         print(f"new fruit_map: {fruit_map}")
         win_start += 1
+    if (win_end - win_start + 1) > max_length:  # sub arr
+        sub_str_arr = fruit[win_start: win_end + 1]
     max_length = max(max_length, win_end - win_start + 1)
-    sub_str_arr = fruit[win_start: win_end + 1]
 print(f"max_length: {max_length}")
 print(f"longest sub-arr: {sub_str_arr}")
 
@@ -52,7 +53,7 @@ for win_end in range(len(the_str)):
             del hash_map[left_char]
         print(f"new hash_map: {hash_map}")
         win_start += 1
-    if (win_end - win_start + 1) > max_length:
+    if (win_end - win_start + 1) > max_length:  # sub arr
         sub_str_arr = the_str[win_start: win_end + 1]
     max_length = max(max_length, win_end - win_start + 1)
 print(f"max_length: {max_length}")
