@@ -28,6 +28,8 @@ for win_end in range(len(fruit)):
 print(f"max_length: {max_length}")
 print(f"longest sub-arr: {sub_str_arr}")
 
+print("================================================")
+
 # ex # 2
 # =======
 # longest sub str which not more k distinct char
