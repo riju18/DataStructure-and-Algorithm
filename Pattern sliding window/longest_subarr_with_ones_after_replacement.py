@@ -8,13 +8,15 @@ for win_end in range(len(the_arr)):
     if right_char == 1:
         repeated_one += 1
     print(f"repeated_one: {repeated_one}")
-    if (win_end-win_start+1-repeated_one) > k:
+    if (win_end - win_start + 1 - repeated_one) > k:
         if the_arr[win_start] == 1:
             repeated_one -= 1
+            print(f"updated repeated_one: {repeated_one}")
         win_start += 1
-    if (win_end-win_start+1) > max_length:
-        sub_arr = the_arr[win_start:win_end+1]
-    max_length = max(max_length, win_end-win_start+1)
+        print(f"updated win_start: {win_start}")
+    if (win_end - win_start + 1) > max_length:
+        sub_arr = the_arr[win_start:win_end + 1]
+    max_length = max(max_length, win_end - win_start + 1)
     print(f"max_length: {max_length}")
 print(f"Final max_length: {max_length}")
 print(f"Final sub array: {sub_arr}")
