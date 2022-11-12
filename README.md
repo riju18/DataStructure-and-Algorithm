@@ -6,7 +6,7 @@
 + [Linear Data Structure](#linear-Data-Structure)
 + [Non-Linear Data Structure](#non-Linear-Data-Structure)
 + [Graph](#graph)
-+ [Sliding window]()
++ [Sliding window](#sliding-window)
 
 # sorting:
 + bubble
@@ -32,3 +32,7 @@
 # graph:
 + BFS
 + DFS
+
+# sliding-window:
++ Fixed size
++ Dynamic size
