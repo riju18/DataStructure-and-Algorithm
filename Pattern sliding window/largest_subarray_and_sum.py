@@ -14,7 +14,7 @@ for win_end in range(len(arr)):
         # ******* most important part starts ***********
         win_sum -= arr[win_start]
         print(f"updated win_sum: {win_sum}")
-        win_start += 1
+        win_start += 1  # slide the window
         print(f"win_start: {win_start}")
         # ******* most important part ends ***********
 
