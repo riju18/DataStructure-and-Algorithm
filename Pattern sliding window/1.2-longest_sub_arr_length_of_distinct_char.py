@@ -58,6 +58,7 @@ for win_end in range(len(the_str)):
     if (win_end - win_start + 1) > max_length:  # sub arr
         sub_str_arr = the_str[win_start: win_end + 1]
     max_length = max(max_length, win_end - win_start + 1)
+    print(f"Updated max_length: {max_length}")
 print(f"max_length: {max_length}")
 print(f"longest sub-str: {sub_str_arr}")
 
