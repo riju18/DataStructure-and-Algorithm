@@ -17,7 +17,7 @@ for win_end in range(len(arr)):
         print(f"Updated win sum: {win_sum}")
         win_start += 1
 if min_length == math.inf:
-    print("Got not min length of sum")
+    print("Got no min length of sum")
 else:
     print(f"Final min_length: {min_length}")
     print(f"Final sub arr: {min(sub_arr, key=len)}")  # smallest sub arr
