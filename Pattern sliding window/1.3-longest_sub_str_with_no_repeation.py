@@ -22,4 +22,4 @@ for win_end in range(len(the_str)):
     sub_arr.append(sub_str)
 print(f"Final max_length: {max_length}")
 distinct_sub_arr = list(filter(lambda i: len(i) == max_length, sub_arr))
-print(distinct_sub_arr)
+print(f"Final sub-array list: {distinct_sub_arr}")
