@@ -17,3 +17,8 @@ else:
     result = [-1, -1]
 result_ind = [nums.index(result[0]), nums.index(result[1])]
 print(result_ind)
+
+# **************************
+# Time complexity: O(N)
+# Space complexity: O(1)
+# ***************************
