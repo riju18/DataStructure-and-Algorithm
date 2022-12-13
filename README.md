@@ -7,6 +7,7 @@
 + [Non-Linear Data Structure](#non-Linear-Data-Structure)
 + [Graph](#graph)
 + [Sliding window](#sliding-window)
++ [Two Pointer](#two-pointer)
 
 # sorting:
 + bubble
@@ -36,3 +37,5 @@
 # sliding-window:
 + Fixed size
 + Dynamic size
+
+# two-pointer:
