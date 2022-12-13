@@ -11,4 +11,6 @@ while left < right:
         right -= 1
     else:
         left += 1
+else:
+    result = [-1, -1]
 print(result)
