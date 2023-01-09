@@ -28,8 +28,8 @@ class Queue:
     def getItems(self):
         print(f"All items: {self.items}")
 
-    def getSize(self):
-        print(f"length of items: {len(self.items)}")
+    def __len__(self):
+        return len(self.items)
 
 
 if __name__ == '__main__':
@@ -46,4 +46,4 @@ if __name__ == '__main__':
     q.removeRear()
 
     q.getItems()
-    q.getSize()
+    print(f"Item size: {len(q)}")
