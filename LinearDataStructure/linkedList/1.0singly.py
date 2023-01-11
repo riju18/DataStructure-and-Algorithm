@@ -20,8 +20,9 @@ class linkedList:  # 2
     def show(self):
         current = self.start
         while current:
-            print(current.value)
+            print(current.value, end=' ')
             current = current.next
+        print('\n')
 
     def showByPos(self, ind):
         pos = 0
@@ -51,6 +52,16 @@ class linkedList:  # 2
             c += 1
         print(f"Length of linked list is: {c}")
 
+    def last_node(self):
+        current = self.start
+        last_node_val = None
+        if current:
+            while current:
+                if current.next is None:
+                    last_node_val = current.value
+                current = current.next
+        print(f"Last node is: {last_node_val}")
+
     def reverse_linked_list(self):
         current_node = self.start
         previous_node = None
@@ -61,8 +72,9 @@ class linkedList:  # 2
 
         current = previous_node
         while current:
-            print(current.value)
+            print(current.value, end=' ')
             current = current.next
+        print('\n')
 
 
 if __name__ == '__main__':
@@ -71,8 +83,11 @@ if __name__ == '__main__':
     linkList.insert(5)
     linkList.insert(3)
     linkList.insert(1)
+    print("Original linked list: ")
     linkList.show()
     linkList.showByPos(1)
     linkList.showPosByVal(5)
     linkList.get_length()
+    linkList.last_node()
+    print("Reversed linked list: ")
     linkList.reverse_linked_list()
