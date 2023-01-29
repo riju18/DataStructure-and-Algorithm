@@ -58,6 +58,12 @@ def findMaxNode(root):  # most right
         return root.value, size
 
 
+def max_depth(root):
+    if not root:
+        return 0
+    return 1 + max(max_depth(root.left), max_depth(root.right))
+
+
 def invertTree(root):
     if not root:
         return None
@@ -126,6 +132,9 @@ InOrder(rt)
 
 print('\n')
 print(f"Min val & size of BST: {findMinNode(rt)}, Max val & size of BST: {findMaxNode(rt)}")
+
+print('\n')
+print(f"Max depth of bst: {max_depth(rt)}")
 
 print('\nInvert Tree: left is right & right is left.')
 invertTree(rt)
